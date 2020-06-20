@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  api-gateway:
+    build: .
+    restart: always
+    ports:
+    - "80:80"
+    networks:
+      - front-network
+      - back-network
+
+  golang_api:
+    build: services/service01
+    networks:
+      - back-network
+
+  deno_api:
+    build: services/service02
+    networks:
+      - back-network
+
+  python_api:
+    build: services/service03
+    networks: 
+      - back-network
+
+networks:
+  back-network:
+  front-network:
