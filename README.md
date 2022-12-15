@@ -25,3 +25,6 @@ $ docker compose run --rm certbot renew
 #### API gateway high overview:
 
 ![illustration](apigateway.png)
+
+#### Reference:
+- https://mindsers.blog/post/https-using-nginx-certbot-docker/
